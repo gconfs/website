@@ -1,0 +1,19 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+.vscode
+local_settings.py
+db.sqlite3
+media
+subject
+archive
+venv
+config/local_settings.py
+
+### PyCharm ###
+.idea/
+
+### MacOS ###
+.DS_Store

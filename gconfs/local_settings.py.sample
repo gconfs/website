@@ -1,0 +1,8 @@
+import os
+from gconfs import settings
+
+DEBUG = True
+ALLOWED_HOSTS = []
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '***REMOVED***'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '***REMOVED***'
