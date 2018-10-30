@@ -145,6 +145,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 try:
-    from config.local_settings import *
+    from gconfs.local_settings import *
 except ImportError:
     pass
