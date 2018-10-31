@@ -89,7 +89,7 @@ svg {
     font-weight: 600;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 990px) {
     .navbar-dark .navbar-nav .active a::after {
         border-bottom: 3px solid #fff;
         bottom: -8px;
@@ -98,4 +98,23 @@ svg {
         position: absolute;
         right: 0;
     }
+    
+    .lorem-right {
+        margin-left: 36%;
+    }
+
+    .lorem-left {
+        margin-right: 36%;
+    } 
+}
+
+
+
+
+.border-light {
+    box-shadow: 2px 2px 0 #ce7227, -2px -2px 0 #ce7227;
+}
+
+.border-dark {
+    box-shadow: 2px 2px 0 #343a40, -2px -2px 0 #343a40;
 }
