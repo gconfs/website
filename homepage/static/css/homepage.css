@@ -5,17 +5,17 @@
     background-attachment: fixed, fixed;
 }
 
-.last-header {
-    text-align: center;
-    background-image: linear-gradient(to top, rgba(46, 48, 60, 0.8), rgba(46, 48, 60, 0.8)), url("/static/img/vermeille.jpg");
-    background-size: cover;
-    background-attachment: fixed, fixed;
-}
-
 .intro-message {
     position: relative;
     padding-top: 16em;
     padding-bottom: 8em;
+}
+
+.footer {
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(46, 48, 60, 0.8), rgba(46, 48, 60, 0.8)), url("/static/img/vermeille.jpg");
+    background-size: cover;
+    background-attachment: fixed, fixed;
 }
 
 svg {
@@ -64,10 +64,6 @@ svg {
   border-radius: 24px;
 }
 
-.footer a + a {
-    margin-left: 10em;
-}
-
 .footer a:link {
     color: #ffffff;
 }
@@ -78,8 +74,8 @@ svg {
 }
 
 .copynope {
+    white-space: nowrap;
     margin: 2em;
-    white-space: nowrap; 
 }
 
 .copynope > a {
