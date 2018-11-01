@@ -40,11 +40,13 @@ DEFAULT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'social_django', 
+    'social_django',
+    'crispy_forms',
 ]
 
 LOCAL_APPS = [
     'homepage',
+    'dashboard',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -137,6 +139,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Misc
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
