@@ -6,6 +6,7 @@ from django.views.generic.base import TemplateView
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.http import HttpResponse
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
@@ -18,17 +19,16 @@ from .forms import EventGenForm
 
 # Create your views here.
 
-
-class DashboardView(TemplateView):
+class DashboardView(LoginRequiredMixin, TemplateView):
 
     template_name = "dashboard.html"
-
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
 
 
-class EventGenView(FormView):
+class EventGenView(LoginRequiredMixin, FormView):
 
     template_name = "eventgen.html"
     form_class = EventGenForm
