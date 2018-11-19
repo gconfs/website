@@ -93,8 +93,8 @@ AUTHENTICATION_BACKENDS = (
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'homepage'
-LOGOUT_REDIRECT_URL = 'homepage'
+LOGIN_REDIRECT_URL = 'homepage:homepage'
+LOGOUT_REDIRECT_URL = 'homepage:homepage'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
