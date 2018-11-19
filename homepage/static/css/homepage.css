@@ -13,7 +13,7 @@
 
 .footer {
     text-align: center;
-    background-image: linear-gradient(to top, rgba(46, 48, 60, 0.8), rgba(46, 48, 60, 0.8)), url("/static/img/vermeille.jpg");
+    background-image: linear-gradient(to top, rgba(46, 48, 60, 0.8), rgba(46, 48, 60, 0.8)), url("/static/img/amphi.jpg");
     background-size: cover;
     background-attachment: fixed, fixed;
 }
@@ -112,9 +112,9 @@ svg {
 }
 
 .border-light {
-    box-shadow: 2px 2px 0 #ce7227, -2px -2px 0 #ce7227;
+    box-shadow: 3px 3px 0 #ce7227, -3px -3px 0 #ce7227;
 }
 
 .border-dark {
-    box-shadow: 2px 2px 0 #343a40, -2px -2px 0 #343a40;
+    box-shadow: 3px 3px 0 #343a40, -3px -3px 0 #343a40;
 }
