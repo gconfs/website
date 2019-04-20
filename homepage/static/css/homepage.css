@@ -110,11 +110,3 @@ svg {
         margin-right: 36%;
     } 
 }
-
-.border-light {
-    box-shadow: 3px 3px 0 #ce7227, -3px -3px 0 #ce7227;
-}
-
-.border-dark {
-    box-shadow: 3px 3px 0 #343a40, -3px -3px 0 #343a40;
-}
