@@ -42,6 +42,7 @@ DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     'social_django',
     'crispy_forms',
+    'epita_connect',
 ]
 
 LOCAL_APPS = [
@@ -87,7 +88,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'gconfs.wsgi.application'
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GoogleOAuth2',
+    'epita_connect.backend.EpitaOpenIdConnect',
     'django.contrib.auth.backends.ModelBackend',
 )
 

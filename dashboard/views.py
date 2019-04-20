@@ -15,7 +15,7 @@ from reportlab.lib.units import cm
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 
-from .forms import EventGenForm
+from .forms import GeneratorForm
 
 # Create your views here.
 
@@ -27,11 +27,18 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         return context
 
+class EventsView(LoginRequiredMixin, TemplateView):
 
-class EventGenView(LoginRequiredMixin, FormView):
+    template_name = "events.html"
 
-    template_name = "eventgen.html"
-    form_class = EventGenForm
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+class GeneratorView(LoginRequiredMixin, FormView):
+
+    template_name = "generator.html"
+    form_class = GeneratorForm
 
     def generate_pdf(self, cleaned_data):
         buffer = io.BytesIO()

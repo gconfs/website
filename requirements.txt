@@ -1,5 +1,7 @@
 django==2.2
-social-auth-app-django=3.1
+social-auth-backend-epita==0.0.4
+social-auth-app-django==3.1
 django-crispy-forms==1.7
 reportlab==3.5
 pdf2image==1.5
+social-auth-core[openidconnect]
