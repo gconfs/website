@@ -132,7 +132,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 
 .sidebar {
   width: 90px !important;
-  background-color: #212529;
+  /* background-color: #212529; */
   min-height: calc(100vh - 56px);
 }
 
@@ -168,12 +168,16 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   display: none;
 }
 
+.sidebar .nav-item.active .nav-link {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .sidebar .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .sidebar .nav-item .nav-link:active, .sidebar .nav-item .nav-link:focus, .sidebar .nav-item .nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .sidebar.toggled {
