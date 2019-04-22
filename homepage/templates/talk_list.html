@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if is_paginated %}
+    <ul class="pagination justify-content-center m-5">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+        </li>
+        {% endif %}
+
+        {% for i in paginator.page_range %}
+        {% if page_obj.number == i %}
+        <li class="page-item active">
+            <span class="page-link">
+                {{ i }}<span class="sr-only">(current)</span>
+            </span>
+        </li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <span class="page-link">Next</span>
+        </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+
+    <div class="card-columns mb-4">
+        {% for video in video_list %}
+        <div class="card">
+            <a href="https://www.youtube.com/watch?v={{ video.slug }}" target="_blank">
+                <img class="card-img-top" src="{{ video.thumbnail }}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ video.title }}</h5>
+                <p class="card-text"><small class="text-muted">{{ video.date }}</small></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

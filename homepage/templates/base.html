@@ -38,15 +38,17 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                    {% with url_name=request.resolver_match.url_name %}
+                    <li class="nav-item {% if url_name == 'homepage' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'homepage:homepage' %}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Talks</a>
+                    <li class="nav-item {% if url_name == 'talk' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'homepage:talk' %}">Talks</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Stream</a>
                     </li>
+                    {% endwith %}
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"

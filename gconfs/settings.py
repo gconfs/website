@@ -43,8 +43,8 @@ THIRD_PARTY_APPS = [
     'social_django',
     'crispy_forms',
     'epita_connect',
-    'bootstrap4',
     'bootstrap_datepicker_plus',
+    'django_cron',
 ]
 
 LOCAL_APPS = [
@@ -145,6 +145,12 @@ USE_TZ = True
 # User
 
 AUTH_USER_MODEL = 'dashboard.User'
+
+# Cron tasks to run
+
+CRON_CLASSES = [
+    'gconfs.cron.FetchYoutube',
+]
 
 # Misc
 

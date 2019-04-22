@@ -24,6 +24,18 @@ svg {
   height: 100px;
 }
 
+.page-item.active .page-link {
+    background-color: #ce7227;
+    border-color: #ce7227;
+}
+.page-link {
+    color: #ce7227;
+}
+
+.page-link:hover {
+    color: #ce7227;
+}
+
 .landing {
     color: #ffffff;
     /*font-family: Raleway, Helvetica, sans-serif;*/
@@ -37,6 +49,7 @@ svg {
   padding-top: 4em;
   padding-bottom: 4em;
 }
+
 
 .subtitle {
     color: #ffffff;

@@ -17,6 +17,16 @@ class Tutor(models.Model):
     phone = models.CharField(max_length=254)
     job = models.CharField(max_length=254)
 
+class Video(models.Model):
+    title = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+    thumbnail = models.URLField()
+    date = models.DateTimeField()
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title
+
 class Event(models.Model):
     title = models.CharField(max_length=254)
     description = models.TextField(blank=True)
