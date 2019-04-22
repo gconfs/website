@@ -2,6 +2,8 @@ import io
 
 from django.shortcuts import render
 from django.views.generic.edit import FormView
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.views.generic.base import TemplateView
 from django.shortcuts import redirect
 from django.contrib import messages
@@ -15,7 +17,8 @@ from reportlab.lib.units import cm
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 
-from .forms import GeneratorForm
+from .forms import GeneratorForm, EventForm
+from .models import Event
 
 # Create your views here.
 
@@ -27,13 +30,31 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         return context
 
-class EventsView(LoginRequiredMixin, TemplateView):
-
-    template_name = "events.html"
-
+class EventDetailView(LoginRequiredMixin, DetailView):
+    
+    model = Event
+    template_name = "event_detail.html"
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+class EventListView(LoginRequiredMixin, ListView):
+    
+    model = Event
+    template_name = "event_list.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+class EventFormView(LoginRequiredMixin, FormView):
+
+    template_name = "event_form.html"
+    form_class = EventForm
+
+    def form_valid(self, form):
+        return super().form_valid(form)
 
 class GeneratorView(LoginRequiredMixin, FormView):
 

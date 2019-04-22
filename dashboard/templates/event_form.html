@@ -1,0 +1,49 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
+<link href="{% static 'css/admin.css' %}" rel="stylesheet">
+<script src="{% static 'js/admin.js' %}"></script>
+
+<link href="/static/bootstrap_datepicker_plus/css/datepicker-widget.css" type="text/css" media="all" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" type="text/css" media="all" rel="stylesheet">
+<script type="text/javascript" src="/static/bootstrap_datepicker_plus/js/datepicker-widget.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+{% endblock %}
+
+{% block admin %}
+<div class="container">
+
+    <form method="post">
+    {% csrf_token %}
+    <div class="card">
+        <div class="card-header"><h5 class="card-title">Create a new event</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Enter the information you are currently aware of, they can be modified later</h6></div>
+
+        <div class="card-body">
+            {{ form.title|as_crispy_field }}
+            <div class="row">
+                <div class="col-3">
+                    {{ form.manager|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.youtube|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.begin|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.end|as_crispy_field }}
+                </div>
+            </div>
+            {{ form.description|as_crispy_field }}
+        </div>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Create event</button>
+  </form>
+</div>
+{% endblock %}

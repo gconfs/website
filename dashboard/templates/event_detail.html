@@ -1,22 +1,16 @@
 {% extends 'admin.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
 <link href="{% static 'css/admin.css' %}" rel="stylesheet">
-
 <script src="{% static 'js/admin.js' %}"></script>
 {% endblock %}
 
 {% block admin %}
-<div class="container-fluid">
-
-    <!-- Breadcrumbs-->
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">Events</li>
-    </ol>
+<div class="container">
+    <h1 class="display-4">{{ event.title }}</h1>
+    <br/>
 </div>
 {% endblock %}

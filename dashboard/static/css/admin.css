@@ -31,10 +31,6 @@ body.fixed-nav #content-wrapper {
   padding-left: 90px;
 }
 
-body.fixed-nav.sidebar-toggled #content-wrapper {
-  padding-left: 0;
-}
-
 @media (min-width: 768px) {
   body.fixed-nav #content-wrapper {
     padding-left: 225px;
@@ -283,12 +279,29 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   --input-padding-y: 0.75rem;
 }
 
+.bd-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.bd-lead {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 .card-login {
   max-width: 25rem;
 }
 
 .card-register {
   max-width: 40rem;
+}
+
+.card-header {
+  border-bottom: 0px;
 }
 
 .form-label-group {

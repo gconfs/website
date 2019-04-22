@@ -43,11 +43,13 @@ THIRD_PARTY_APPS = [
     'social_django',
     'crispy_forms',
     'epita_connect',
+    'bootstrap4',
+    'bootstrap_datepicker_plus',
 ]
 
 LOCAL_APPS = [
-    'homepage',
     'dashboard',
+    'homepage',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -139,6 +141,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# User
+
+AUTH_USER_MODEL = 'dashboard.User'
 
 # Misc
 

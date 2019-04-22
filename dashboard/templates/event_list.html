@@ -1,0 +1,40 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
+<link href="{% static 'css/admin.css' %}" rel="stylesheet">
+<script src="{% static 'js/admin.js' %}"></script>
+{% endblock %}
+
+{% block admin %}
+<div class="container">
+    <h1 class="display-1">Events</h1>
+    <blockquote class="blockquote">
+        <p class="mb-0">By failing to prepare, you are preparing to fail.</p>
+        <footer class="blockquote-footer"><cite title="Source Title">Benjamin Franklin</cite></footer>
+    </blockquote>
+    <br/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>On</th>
+                <th>Manager</th>
+                <th>Youtube</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in event_list %}
+            <tr>
+                <td><a href="{% url 'dashboard:events_view' event.pk %}">{{ event.title }}</a></td>
+                <td>{{ event.begin }}</td>
+                <td>{{ event.manager }}</td>
+                <td>{{ event.youtube }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
