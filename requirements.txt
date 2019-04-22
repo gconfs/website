@@ -4,6 +4,7 @@ social-auth-app-django==3.1
 django-crispy-forms==1.7
 reportlab==3.5
 pdf2image==1.5
+mysqlclient
 django-bootstrap-datepicker-plus
 google-api-python-client
 django-cron
