@@ -25,7 +25,7 @@ SECRET_KEY = '5c2x_xha#vh05+gx7=5mthrr)3$ms%rf4-omc+se3g2)zvc(53'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gconfs.fr', 'dev.gconfs.fr']
 
 
 # Application definition
