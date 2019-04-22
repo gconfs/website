@@ -19,6 +19,7 @@ class TalkListView(ListView):
     model = Video
     template_name = "talk_list.html"
     paginate_by = 50
+    ordering = ['-date']
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
