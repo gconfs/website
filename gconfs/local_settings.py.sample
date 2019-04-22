@@ -4,17 +4,8 @@ from gconfs import settings
 DEBUG = True
 ALLOWED_HOSTS = []
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '127.0.0.1',
-        'NAME': 'gconfs',
-        'USER': 'postgres',
-    }
-}
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '***REMOVED***'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '***REMOVED***'
+SOCIAL_AUTH_EPITA_KEY = '***REMOVED***'
+SOCIAL_AUTH_EPITA_SECRET = '***REMOVED***'
 
 YOUTUBE_API_KEY = '***REMOVED***'
 YOUTUBE_RUN_EVERY_MINS=120
