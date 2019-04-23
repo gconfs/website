@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="intro-team">
+    <div class="container-fluid">
+        <section id="speakers">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-2">
+                    <div class="member-profile">
+                        <h5><span>as</span> Treasurer</h5>
+                        <img src="https://photos.cri.epita.fr/square/paul.khuat-duy" alt="" />
+                        <h4><span>Quentin</span>Barbarat</h4>
+                    </div>	
+                </div>
+                <div class="col-md-2">
+                    <div class="member-profile">
+                        <h5><span>as</span> President</h5>
+                        <img src="https://photos.cri.epita.fr/square/quentin.barbarat" alt="" />
+                        <h4><span>Quentin</span>Barbarat</h4>
+                    </div>	
+                </div>
+                <div class="col-md-2">
+                    <div class="member-profile">
+                        <h5><span>as</span> Secretary</h5>
+                        <img src="https://photos.cri.epita.fr/square/maelle.roubeau" alt="" />
+                        <h4><span>Maëlle</span>Roubeau</h4>
+                    </div>	
+                </div>
+            </div>
+        </section>
+    </div>
+    <div style="height:90px">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon points="100,0 100,100 0,100 0,90" style="fill: #ce7227;" />
+        </svg>
+    </div>
+</div>
+{% endblock %}

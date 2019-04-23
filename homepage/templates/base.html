@@ -45,8 +45,8 @@
                     <li class="nav-item {% if url_name == 'talk' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'homepage:talk' %}">Talks</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Stream</a>
+                    <li class="nav-item {% if url_name == 'team' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'homepage:team' %}">Team</a>
                     </li>
                     {% endwith %}
                     {% if user.is_authenticated %}
