@@ -15,5 +15,8 @@ config/local_settings.py
 ### PyCharm ###
 .idea/
 
+### VIM ###
+*.swp
+
 ### MacOS ###
 .DS_Store
