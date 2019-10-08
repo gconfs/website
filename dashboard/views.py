@@ -123,7 +123,7 @@ class GeneratorView(LoginRequiredMixin, FormView):
 
         styles['Normal'].fontSize = 11
         # set form description
-        description = Paragraph("Description de l'Even : ", style=styles["Normal"])
+        description = Paragraph("Description de l'Event : ", style=styles["Normal"])
         flowables.append(description)
         flowables.append(Spacer(0, 12))
 
