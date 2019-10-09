@@ -1,4 +1,4 @@
-## GConfs Website
+## GConfs' Website
 
 ### Dependencies
 * python3
