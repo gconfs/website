@@ -12,6 +12,7 @@
 * `pipenv install -r requirements.txt`
 * `pipenv shell`
 * `python manage.py migrate`
+* Add your youtube & CRI api credentials in the `local_settings.py`
 
 ### Running a local copy
 * `pipenv shell` (If not done already)
