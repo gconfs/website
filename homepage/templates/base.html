@@ -45,8 +45,11 @@
                     <li class="nav-item {% if url_name == 'talk' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'homepage:talk' %}">Talks</a>
                     </li>
-                    <li class="nav-item {% if url_name == 'team' %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'homepage:team' %}">Team</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wiki.gconfs.fr">Wiki</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://pad.gconfs.fr">Pad</a>
                     </li>
                     {% endwith %}
                     {% if user.is_authenticated %}
