@@ -1,6 +1,9 @@
 import os
 from gconfs import settings
 
+# You can generate a unique secret key with 
+# ./manage.py shell -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+SECRET_KEY = '***REMOVED***'
 DEBUG = True
 ALLOWED_HOSTS = []
 

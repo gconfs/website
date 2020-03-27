@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5c2x_xha#vh05+gx7=5mthrr)3$ms%rf4-omc+se3g2)zvc(53'
+SECRET_KEY = '***FIXME***'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -153,6 +153,12 @@ CRON_CLASSES = [
 # Misc
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+SOCIAL_AUTH_EPITA_KEY = '***FIXME***'
+SOCIAL_AUTH_EPITA_SECRET = '***FIXME***'
+
+YOUTUBE_API_KEY = '***FIXME***'
+YOUTUBE_RUN_EVERY_MINS=120
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
