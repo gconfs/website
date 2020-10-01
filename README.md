@@ -5,7 +5,7 @@
 * python3-dev
 * libmysql
 
-### Optional dependencies
+### Optional dependency
 * pipenv
 
 ### Installation - Using pipenv
