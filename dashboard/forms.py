@@ -4,7 +4,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Submit
 
-from bootstrap_datepicker_plus import DateTimePickerInput
+from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 
 from .models import Event
 
