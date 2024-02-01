@@ -32,22 +32,23 @@ class FetchYoutube(CronJobBase):
 
         while True:
             response = self.fetch_videos(youtube, response)
+            
+            next_page_token = response.get('nextPageToken')
 
             for item in response['items']:
                 print(item['snippet']['title'])
-
                 self.slugs.add(item['snippet']['resourceId']['videoId'])
                 obj, created = Video.objects.update_or_create(
                     slug=item['snippet']['resourceId']['videoId'],
                     defaults={
                         'title': item['snippet']['title'],
-                        'description': item['snippet']['description'],
+                        #'description': item['snippet']['description'],
                         'date': item['snippet']['publishedAt'],
                         'thumbnail': item['snippet']['thumbnails']['high']['url'],
                     }
                 )
 
-            if 'nextPageToken' not in response:
+            if not next_page_token:
                 break
 
     def do(self):
