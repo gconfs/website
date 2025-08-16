@@ -57,24 +57,6 @@
                         <a class="nav-link" href="https://wiki.gconfs.fr">Wiki</a>
                     </li>
                     {% endwith %}
-                    {% if user.is_authenticated %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ user.first_name|title }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="{% url 'dashboard:dashboard' %}">Dashboard</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-                        </div>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'social:begin' 'epita' %}">Login</a>
-                    </li>
-                    {% endif %}
                 </ul>
             </div>
         </div>
